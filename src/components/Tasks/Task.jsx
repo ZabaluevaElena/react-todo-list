@@ -9,7 +9,7 @@ const Task = ({ id, text, completed, list, onRemove, onEdit, onComplate }) => {
   return (
     <div key={id} className="tasks__items-row">
       <div className="checkbox">
-        <input id={`task-${id}`} type="checkbox" onClick={onChangeCheckbox} checked={completed} />
+        <input id={`task-${id}`} type="checkbox" onClick={onChangeCheckbox} checked={completed} onChange={()=>{}} />
         <label htmlFor={`task-${id}`}>
           <svg
             width="11"
