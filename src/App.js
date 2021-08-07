@@ -14,10 +14,10 @@ function App() {
   let history = useHistory();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/lists?_expand=color&_embed=tasks').then(({data}) => {
+    axios.get('/lists?_expand=color&_embed=tasks').then(({data}) => {
       setLists(data);
     });
-    axios.get('http://localhost:3001/colors').then(({data}) => {
+    axios.get('/colors').then(({data}) => {
       setColors(data);
     });
   }, [])
@@ -57,7 +57,7 @@ function App() {
         return item;
       });
       setLists(newList);
-      axios.delete('http://localhost:3001/tasks/' + taskId).catch(() => {
+      axios.delete('/tasks/' + taskId).catch(() => {
         alert('Не удалось удалить задачу');
       });
     }
@@ -80,7 +80,7 @@ function App() {
         return list;
       });
       setLists(newList);
-      axios.patch('http://localhost:3001/tasks/' + taskObj.id, {
+      axios.patch('/tasks/' + taskObj.id, {
         text: newTaskText
       }).catch(() => {
         alert('Не изаменить задачу');
@@ -101,7 +101,7 @@ function App() {
       return list;
     });
     setLists(newList);
-    axios.patch('http://localhost:3001/tasks/' + taskId, {
+    axios.patch('/tasks/' + taskId, {
       completed
     }).catch(() => {
       alert('Не обновить задачу');
