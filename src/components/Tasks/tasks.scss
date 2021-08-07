@@ -1,0 +1,155 @@
+.tasks {
+  a {
+    text-decoration: none;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #64c4ed;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    &:hover img {
+      opacity: 0.2;
+    }
+    img {
+      opacity: 0;
+      margin-left: 15px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__form {
+      margin-top: 20px;
+      cursor: pointer;
+      &-new {
+          display: flex;
+          align-items: center;
+          opacity: 0.4;
+          transition: opacity 0.15s ease-in-out;
+          &:hover {
+              opacity: 0.8;
+          }
+          span {
+              font-size: 16px;
+              margin-left: 15px;
+          }
+          img {
+            width: 16px;
+            height: 16%;
+            margin-left: 4px;  
+          }
+      }
+      &-block {
+          button {
+              margin-top: 15px;
+              margin-right: 10px;
+          }
+      }
+  }
+  &__items {
+    margin-top: 39px;
+    h2 {
+      font-family: Montserrat;
+      font-weight: bold;
+      font-size: 22px;
+      text-align: center;
+      color: #c9d1d3;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+    &-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      &:hover .tasks__items-row-actions {
+        opacity: 0.9;
+      }
+      p {
+        margin-left: 15px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      &-actions {
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background-color: lighten(#f4f6f8, 2%);
+          border-radius: 6px;
+          margin-left: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#f4f6f8, 2%);
+            svg {
+              opacity: 0.9;
+            }
+          }
+
+          svg {
+            width: 11px;
+            height: 11px;
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+}
+
+.checkbox {
+  &:hover {
+    label {
+      background: #f2f2f2;
+    }
+    svg {
+      opacity: 1;
+      path {
+        fill: #b3b3b3;
+      }
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    border: 2px solid #e8e8e8;
+    svg {
+      position: relative;
+      left: 3px;
+      opacity: 0;
+    }
+  }
+  input {
+    display: none;
+  }
+  input:checked + label {
+    background: #4dd599;
+    border-color: #4dd599;
+    svg {
+      opacity: 1;
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
