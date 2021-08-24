@@ -3,7 +3,6 @@
 Ссылка на проект: https://react-app-todo-lists.herokuapp.com/
 
 Stack:
-
 - ReactJS + хуки
 - React Router
 - Redux
