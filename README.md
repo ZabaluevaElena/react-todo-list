@@ -4,7 +4,10 @@
 
 Stack:
 
-ReactJS (useState, useReducer, useEffect)
-React Router
-Axios
-classnames
+- ReactJS + хуки
+- React Router
+- Redux
+- Redux thunk
+- json-server
+- Axios
+- classnames
