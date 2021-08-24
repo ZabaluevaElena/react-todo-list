@@ -1,2 +1,10 @@
+Разработка списка задач на ReactJS
 
-https://react-app-todo-lists.herokuapp.com/
+Ссылка на проект: https://react-app-todo-lists.herokuapp.com/
+
+Stack:
+
+ReactJS (useState, useReducer, useEffect)
+React Router
+Axios
+classnames
